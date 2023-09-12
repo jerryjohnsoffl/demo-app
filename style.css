@@ -26,6 +26,26 @@ header {
     transition: .3s;
 }
 
+.menu-icon {
+    width: 2rem;
+    height: 2rem;
+    display: none;
+    position: absolute;
+    right: 5px;
+}
+
+.close-icon {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    height: 5px;
+}
+
 header.scrolled {
     background-color: #ffffff33;
     backdrop-filter: blur(20px);
@@ -99,6 +119,7 @@ li a {
     padding: 0 2rem;
     flex-wrap: wrap;
     border-radius: 2rem;
+    margin: 0 2rem;
 }
 
 .img {
@@ -159,9 +180,21 @@ footer p {
         display: none;
     }
 
+    nav {
+        display: none;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
     ul {
         flex-direction: column;
         margin: 2rem 0;
+    }
+
+    .hero {
+        background-position: center;
     }
 
     .hero .btn {
@@ -186,11 +219,32 @@ footer p {
     header {
         flex-direction: column;
         justify-content: space-between;
-
+        min-height: 1rem;
     }
 
     .img {
         width: 7rem;
         height: 7rem;
+    }
+
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: .5s rotate;
+    }
+
+    .menu-icon.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(12px, 3px);
+    }
+    .menu-icon.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-icon.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(16px, -7px);
+    }
+
+    .menu-icon.active .close-icon {
+        display: flex;
     }
 }

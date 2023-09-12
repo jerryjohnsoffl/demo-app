@@ -8,10 +8,11 @@ function stickNavbar() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
+    const menuIcon = document.querySelector('.menu-icon');
+    const navbar = document.querySelector('nav');
 
-    menuToggle.addEventListener('click', function() {
-        menu.classList.toggle('active');
+    menuIcon.addEventListener('click', function() {
+        navbar.classList.toggle('active');
+        menuIcon.classList.toggle('active');
     });
 });
