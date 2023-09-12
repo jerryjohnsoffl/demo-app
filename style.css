@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Open+Sans:wght@500&family=Poppins:wght@200;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 100;
+    background-color: transparent;
+    width: 100%;
+    position: fixed;
+    transition: .3s;
+}
+
+header.scrolled {
+    background-color: #ffffff33;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 5px 20px #00000093;
+}
+
+h2 {
+    color: #fff;
+    text-shadow: 0 0 5px #00000093;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    margin: 0 2rem;
+    list-style-type: none;
+}
+
+li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow: 0 0 10px #00000093;
+}
+
+.btn {
+    height: 3rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: #000;
+    border-radius: 40px;
+    color: #fff;
+}
+
+.section {
+    min-height: 650px;
+    width: 100%;
+}
+
+.hero {
+    background-image: url(./img/Classroom-Gallery.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .btn {
+    display: none;
+}
+
+.image {
+    display: flex;
+    padding: 2rem;
+}
+
+.images-wrap {
+    background-color: #f7f1ff;
+    width: 60%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+    border-radius: 2rem;
+}
+
+.img {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+    width: 40%;
+}
+
+h3 {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+p {
+    font-size: .9rem;
+    font-weight: 400;
+    color: #4e4e4e;
+    letter-spacing: 1px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: #e6def0;
+}
+
+.address {
+    margin: 0 1rem;
+}
+
+.contact {
+    margin: 0 1rem;
+}
+
+footer p {
+    font-size: .75rem;
+}
+
+.contact a {
+    font-size: .75rem;
+    font-weight: 400;
+    color: #4e4e4e;
+}
+
+@media (max-width: 768px) {
+    ul .btn {
+        display: none;
+    }
+
+    ul {
+        flex-direction: column;
+        margin: 2rem 0;
+    }
+
+    .hero .btn {
+        display: flex;
+    }
+
+    .image {
+        flex-direction: column;
+    }
+
+    li a {
+        margin: 0 .2rem;
+    }
+
+    .images-wrap {
+        width: 100%;
+    }
+    .description {
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .img {
+        width: 7rem;
+        height: 7rem;
+    }
+}
