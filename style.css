@@ -186,6 +186,7 @@ footer p {
 
     nav.active {
         display: flex;
+        transform: translateY(0);
     }
 
     ul {
@@ -220,18 +221,31 @@ footer p {
         flex-direction: column;
         justify-content: space-between;
         min-height: 1rem;
+        transition: .3s;
     }
 
     .img {
         width: 7rem;
         height: 7rem;
+        margin: 1.5rem;
     }
 
     .menu-icon {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        transition: .5s rotate;
+    }
+
+    .menu-icon .bar:nth-child(1) {
+        transition: .3s;
+    }
+
+    .menu-icon .bar:nth-child(2) {
+        transition: .3s;
+    }
+
+    .menu-icon .bar:nth-child(3) {
+        transition: .3s;
     }
 
     .menu-icon.active .bar:nth-child(1) {
@@ -244,7 +258,5 @@ footer p {
         transform: rotate(-45deg) translate(16px, -7px);
     }
 
-    .menu-icon.active .close-icon {
-        display: flex;
-    }
+
 }
