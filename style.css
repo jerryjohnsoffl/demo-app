@@ -108,6 +108,8 @@ li a {
 .image {
     display: flex;
     padding: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .images-wrap {
