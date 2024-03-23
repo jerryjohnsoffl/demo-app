@@ -12,6 +12,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 header {
@@ -23,7 +24,7 @@ header {
     background-color: transparent;
     width: 100%;
     position: fixed;
-    transition: .3s;
+    transition: .5s;
 }
 
 .menu-icon {
@@ -46,11 +47,14 @@ header {
     height: 5px;
 }
 
-header.scrolled {
+header.scrolled,
+ header.small {
     background-color: #ffffff33;
     backdrop-filter: blur(20px);
     box-shadow: 0 5px 20px #00000093;
+    transition: .5s;
 }
+
 
 h2 {
     color: #fff;
@@ -60,6 +64,7 @@ h2 {
 ul {
     display: flex;
     align-items: center;
+    transition: .5s;
 }
 
 li {
@@ -99,6 +104,7 @@ li a {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-repeat: no-repeat;
 }
 
 .hero .btn {
@@ -178,7 +184,29 @@ footer p {
     color: #4e4e4e;
 }
 
+@media (min-width: 1365px) {
+    .hero {
+        background-size: 100% 100%;
+    }
+}
+
+@media (max-width: 920px) {
+    .hero {
+        background-position: center;
+    }
+}
+
 @media (max-width: 768px) {
+
+    header {
+        transition: .5s;
+        width: 100%;
+    }
+
+    ul {
+        width: 100%;
+    }
+
     ul .btn {
         display: none;
     }
@@ -190,15 +218,26 @@ footer p {
     nav.active {
         display: flex;
         transform: translateY(0);
+        transition: .5s ease-in-out;
+    }
+
+    .active li  {
+        border-bottom: solid 2px #fff;
+        border-bottom-width: 1px;
+        width: 100%;
+        text-align: center;
+        padding: .25rem 0;
+    }
+
+    li:last-child,
+    li:nth-child(3) {
+        border-bottom: none;
     }
 
     ul {
         flex-direction: column;
         margin: 2rem 0;
-    }
-
-    .hero {
-        background-position: center;
+        transition: .5s;
     }
 
     .hero .btn {

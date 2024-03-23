@@ -1,4 +1,5 @@
 const header = document.querySelector('header');
+const body = document.querySelector('body');
 
 window.addEventListener('scroll', stickNavbar);
 
@@ -14,5 +15,20 @@ document.addEventListener('DOMContentLoaded', () => {
     menuIcon.addEventListener('click', function() {
         navbar.classList.toggle('active');
         menuIcon.classList.toggle('active');
+        navbar.style.transitionDelay = '.5s';
     });
+
+    if (window.screen.width <= 768) {
+        header.classList.add('small');
+    } else {
+        header.classList.remove('small');
+    }
 });
+
+window.addEventListener('resize', ()=> {
+    if (window.screen.width <= 768) {
+        header.classList.add('small');
+    } else {
+        header.classList.remove('small');
+    }
+})
